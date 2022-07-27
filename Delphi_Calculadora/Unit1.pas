@@ -1,0 +1,80 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ToolWin, Vcl.ActnMan,
+  Vcl.ActnCtrls;
+
+type
+  TfrmCalc = class(TForm)
+    edtvalor1: TEdit;
+    lblvalor1: TLabel;
+    edtvalor2: TEdit;
+    lblvalor2: TLabel;
+    edtResultado: TEdit;
+    lblResultado: TLabel;
+    btnSomar: TButton;
+    BtnSubtrair: TButton;
+    BtnDividir: TButton;
+    BtnMultiplicar: TButton;
+    procedure btnSomarClick(Sender: TObject);
+    procedure BtnSubtrairClick(Sender: TObject);
+    procedure BtnMultiplicarClick(Sender: TObject);
+    procedure BtnDividirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalc: TfrmCalc;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCalc.btnSomarClick(Sender: TObject);
+var valor1,valor2,res: real;
+
+begin
+  valor1 := StrToFloat(edtvalor1.Text); {transforma texto em numero}
+  valor2 := StrToFloat(edtvalor2.Text); //transforma texto em numero
+  res:= valor1 + valor2;                //soma os valores
+  edtResultado.text := FloatTostr(res); //transforma o numero em texto
+
+
+end;
+
+procedure TfrmCalc.BtnSubtrairClick(Sender: TObject);
+var valor1,valor2,res: real;
+begin
+   valor1 := StrToFloat(edtvalor1.Text); {transforma texto em numero}
+   valor2 := StrToFloat(edtvalor2.Text); //transforma texto em numero
+   res:= valor1 - valor2;                //soma os valores
+   edtResultado.text := FloatTostr(res); //transforma o numero em texto
+end;
+
+procedure TfrmCalc.BtnDividirClick(Sender: TObject);
+var valor1,valor2,res: real;
+begin
+  valor1 := StrToFloat(edtvalor1.Text); {transforma texto em numero}
+  valor2 := StrToFloat(edtvalor2.Text); //transforma texto em numero
+  res:= valor1 / valor2;                //soma os valores
+  edtResultado.text := FloatTostr(res); //transforma o numero em texto
+end;
+
+procedure TfrmCalc.BtnMultiplicarClick(Sender: TObject);
+var valor1,valor2,res: real;
+begin
+  valor1 := StrToFloat(edtvalor1.Text); {transforma texto em numero}
+  valor2 := StrToFloat(edtvalor2.Text); //transforma texto em numero
+  res:= valor1 * valor2;                //soma os valores
+  edtResultado.text := FloatTostr(res); //transforma o numero em texto
+
+
+end;
+
+end.

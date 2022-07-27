@@ -1,0 +1,80 @@
+object frmCalc: TfrmCalc
+  Left = 0
+  Top = 0
+  Caption = 'Calculadora'
+  ClientHeight = 495
+  ClientWidth = 829
+  Color = clAqua
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblvalor1: TLabel
+    Left = 208
+    Top = 141
+    Width = 33
+    Height = 13
+    Hint = 'dasd'
+    Caption = 'valor 1'
+  end
+  object lblvalor2: TLabel
+    Left = 568
+    Top = 141
+    Width = 30
+    Height = 13
+    Caption = 'Valor2'
+  end
+  object lblResultado: TLabel
+    Left = 379
+    Top = 229
+    Width = 48
+    Height = 13
+    Caption = 'Resultado'
+  end
+  object edtvalor1: TEdit
+    Left = 168
+    Top = 160
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 0
+  end
+  object edtvalor2: TEdit
+    Left = 520
+    Top = 160
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 1
+  end
+  object edtResultado: TEdit
+    Left = 344
+    Top = 248
+    Width = 121
+    Height = 21
+    Alignment = taCenter
+    Color = clCream
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object btnSomar: TButton
+    Left = 368
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Somar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnSomarClick
+  end
+end
